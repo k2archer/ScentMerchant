@@ -1,4 +1,4 @@
-package com.kwei.scentmerchant.activity;
+package com.kwei.scentmerchant.adapter;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -18,7 +18,7 @@ import java.util.List;
 
 import de.greenrobot.event.EventBus;
 
-class AdminListAdapter extends RecyclerView.Adapter<AdminListAdapter.Holder> {
+public class AdminListAdapter extends RecyclerView.Adapter<AdminListAdapter.Holder> {
 
     private Context context;
     private List<AdminItem> itemList;

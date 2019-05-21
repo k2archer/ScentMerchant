@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.kwei.scentmerchant.AdminItem;
 import com.kwei.scentmerchant.R;
+import com.kwei.scentmerchant.adapter.AdminListAdapter;
 import com.kwei.scentmerchant.bean.SetAdminEvent;
 
 import java.util.ArrayList;
