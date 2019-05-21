@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.kwei.scentmerchant.activity.ShopActivity;
+import com.kwei.scentmerchant.activity.StickerDetailActivity;
+import com.kwei.scentmerchant.bean.ShopBean;
 import com.uuzuche.lib_zxing.activity.CaptureActivity;
 import com.uuzuche.lib_zxing.activity.CodeUtils;
 

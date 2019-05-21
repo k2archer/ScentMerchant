@@ -1,12 +1,13 @@
-package com.kwei.scentmerchant;
+package com.kwei.scentmerchant.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.kwei.scentmerchant.AdminItem;
+import com.kwei.scentmerchant.R;
 import com.kwei.scentmerchant.bean.SetAdminEvent;
 
 import java.util.ArrayList;
@@ -17,8 +18,6 @@ import butterknife.OnClick;
 import de.greenrobot.event.EventBus;
 import de.greenrobot.event.Subscribe;
 import de.greenrobot.event.ThreadMode;
-import io.reactivex.Observer;
-import io.reactivex.disposables.Disposable;
 
 public class AdministratorActivity extends AppCompatActivity {
 

@@ -4,6 +4,209 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StickerIncomeActivity">
+    android:fitsSystemWindows="true"
+    tools:context=".activity.StickerIncomeActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#b9b6b6" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:padding="2dp"
+            android:text="桌贴收益"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/iv_adv_bar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toBottomOf="@id/ll_title"
+        app:srcCompat="@drawable/advertisement" />
+
+
+    <TextView
+        android:id="@+id/tv_sticker_amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:layout_marginLeft="15dp"
+        android:text="桌贴数量"
+        android:textSize="22sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="@id/iv_adv_bar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_adv_bar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 16个 "
+        android:textSize="22dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_sticker_amount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_sticker_amount"
+        android:gravity="end"/>
+
+    <View
+        android:id="@+id/v_bar_1"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#b9b6b6"
+        app:layout_constraintLeft_toLeftOf="@id/tv_sticker_amount"
+        app:layout_constraintTop_toBottomOf="@id/tv_sticker_amount" />
+
+    <TextView
+        android:id="@+id/tv_sticker_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:text="桌贴内容"
+        android:textSize="22sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="@id/tv_sticker_amount"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sticker_amount" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 逍遥江湖 "
+        android:textSize="22dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_sticker_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_sticker_content"
+        android:gravity="end"/>
+
+    <View
+        android:id="@+id/v_bar_2"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#b9b6b6"
+        app:layout_constraintLeft_toLeftOf="@id/tv_sticker_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_sticker_content" />
+
+    <TextView
+        android:id="@+id/tv_sticker_activate_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:text="激活日期"
+        android:textSize="22sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="@id/tv_sticker_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sticker_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 2019-5-20 09:35:15 "
+        android:textSize="22dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_sticker_activate_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_sticker_activate_date"
+        android:gravity="end"/>
+
+    <View
+        android:id="@+id/v_bar_3"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#b9b6b6"
+        app:layout_constraintLeft_toLeftOf="@id/tv_sticker_activate_date"
+        app:layout_constraintTop_toBottomOf="@id/tv_sticker_activate_date" />
+
+    <TextView
+        android:id="@+id/tv_sticker_distribute_cycle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:text="投放周期"
+        android:textSize="22sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="@id/tv_sticker_activate_date"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sticker_activate_date" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="60天"
+        android:textSize="22dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_sticker_distribute_cycle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_sticker_distribute_cycle"
+        android:gravity="end"/>
+
+    <View
+        android:id="@+id/v_bar_4"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#b9b6b6"
+        app:layout_constraintLeft_toLeftOf="@id/tv_sticker_distribute_cycle"
+        app:layout_constraintTop_toBottomOf="@id/tv_sticker_distribute_cycle" />
+
+    <TextView
+        android:id="@+id/tv_sticker_income"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:text="桌贴收益"
+        android:textSize="22sp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="@id/tv_sticker_distribute_cycle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sticker_distribute_cycle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:text="数据统计"
+        app:layout_constraintRight_toLeftOf="@id/tv_sticker_income_sign"
+        app:layout_constraintBottom_toBottomOf="@id/tv_sticker_income"
+        app:layout_constraintTop_toTopOf="@id/tv_sticker_income"
+        />
+    <TextView
+        android:id="@+id/tv_sticker_income_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:text=" › "
+        android:textSize="45dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_sticker_income"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_sticker_income" />
+
+    <View
+        android:id="@+id/v_bar_5"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#b9b6b6"
+        app:layout_constraintLeft_toLeftOf="@id/tv_sticker_income"
+        app:layout_constraintTop_toBottomOf="@id/tv_sticker_income" />
 
 </android.support.constraint.ConstraintLayout>

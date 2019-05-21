@@ -20,20 +20,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".StartActivity" />
+        <activity android:name=".activity.ShopActivity" />
+        <activity android:name=".ScanActivity" />
+        <activity android:name=".activity.StickerDetailActivity" />
+        <activity android:name=".activity.MyShopActivity" />
+        <activity android:name=".activity.AdministratorActivity" />
+        <activity android:name=".activity.StickerIncomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".StartActivity"></activity>
-        <activity android:name=".ShopActivity" />
-        <activity android:name=".ScanActivity" />
-        <activity android:name=".StickerDetailActivity" />
-        <activity android:name=".MyShopActivity" />
-        <activity android:name=".AdministratorActivity"></activity>
-        <activity android:name=".StickerIncomeActivity"></activity>
     </application>
 
 </manifest>

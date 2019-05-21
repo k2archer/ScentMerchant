@@ -1,4 +1,4 @@
-package com.kwei.scentmerchant;
+package com.kwei.scentmerchant.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,10 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.kwei.scentmerchant.R;
+import com.kwei.scentmerchant.bean.ShopBean;
+import com.kwei.scentmerchant.StartActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

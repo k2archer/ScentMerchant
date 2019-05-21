@@ -1,7 +1,9 @@
-package com.kwei.scentmerchant;
+package com.kwei.scentmerchant.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.kwei.scentmerchant.R;
 
 public class StickerIncomeActivity extends AppCompatActivity {
 
