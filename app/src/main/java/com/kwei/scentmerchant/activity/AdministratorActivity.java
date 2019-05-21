@@ -6,7 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
 
-import com.kwei.scentmerchant.AdminItem;
+import com.kwei.scentmerchant.bean.AdminItem;
 import com.kwei.scentmerchant.R;
 import com.kwei.scentmerchant.adapter.AdminListAdapter;
 import com.kwei.scentmerchant.bean.SetAdminEvent;

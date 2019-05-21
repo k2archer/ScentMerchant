@@ -1,4 +1,4 @@
-package com.kwei.scentmerchant;
+package com.kwei.scentmerchant.bean;
 
 public class AdminItem {
     public String name;

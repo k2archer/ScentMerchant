@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.kwei.scentmerchant.AdminItem;
+import com.kwei.scentmerchant.bean.AdminItem;
 import com.kwei.scentmerchant.R;
 import com.kwei.scentmerchant.bean.SetAdminEvent;
 
