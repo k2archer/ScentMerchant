@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="food_types">
+        <item>粤菜</item>
+        <item>川菜 </item>
+        <item>鲁菜</item>
+        <item>苏菜</item>
+        <item>浙菜</item>
+        <item>徽菜</item>
+        <item>湘菜</item>
+        <item>闽菜</item>
+    </string-array>
+
+    <string-array name="average_cost_level">
+        <item>50元以下</item>
+        <item>50元至100元</item>
+        <item>150元至200元</item>
+    </string-array>
+</resources>

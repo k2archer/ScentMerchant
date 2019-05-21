@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">有贴商家</string>
+    <string name="add_merchant">申请入住有贴商家平台，填写你的店铺基本信息，信息通过审核后将精美的创意贴邮寄到你的店铺中。</string>
+    <string name="active_desk">将收到的桌贴物料贴到店铺餐桌上，使用有贴商家程序的＂扫一扫＂扫码并提交该桌贴的店内照片，申请激活桌贴。</string>
+    <string name="start_gain">桌贴激活后，顾客每次扫码触发广告，商铺均会获得分成，使用有贴商家程序可查看桌巾扫码率/每日收益及收益结算记录明细。</string>
+    <string name="testing_shop_name">蜜小屋(万达广场店)</string>
+</resources>

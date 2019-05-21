@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".StartActivity">
+
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#b9b6b6" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:padding="2dp"
+            android:text="有贴商家"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/phone_style"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:text=" 186****168 ▾ "
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_title" />
+
+    <TextView
+        android:id="@+id/circle_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/circle_style_gray"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_phone" />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/circle_1"
+        app:layout_constraintTop_toBottomOf="@id/circle_1"
+        app:layout_constraintRight_toRightOf="@id/circle_1"
+        android:background="#ccc9c9" />
+
+    <TextView
+        android:id="@+id/tv_add_merchant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="添加店铺"
+        android:textColor="#FDB700"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toBottomOf="@id/circle_1"
+        app:layout_constraintLeft_toRightOf="@id/circle_1"
+        app:layout_constraintTop_toTopOf="@id/circle_1" />
+
+    <TextView
+        android:id="@+id/tv_add_merchant_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:text="@string/add_merchant"
+        app:layout_constraintLeft_toLeftOf="@id/tv_add_merchant"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_add_merchant" />
+
+    <TextView
+        android:id="@+id/circle_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_style_gray"
+        android:gravity="center"
+        android:text="2"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintLeft_toLeftOf="@id/circle_1"
+        app:layout_constraintTop_toBottomOf="@id/tv_add_merchant_detail" />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/circle_2"
+        app:layout_constraintTop_toBottomOf="@id/circle_2"
+        app:layout_constraintRight_toRightOf="@id/circle_2"
+        android:background="#ccc9c9" />
+
+    <TextView
+        android:id="@+id/tv_active_desk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="激活桌贴"
+        android:textColor="#FDB700"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toBottomOf="@id/circle_2"
+        app:layout_constraintLeft_toRightOf="@id/circle_2"
+        app:layout_constraintTop_toTopOf="@id/circle_2" />
+
+    <TextView
+        android:id="@+id/tv_active_desk_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/circle_2"
+        android:layout_marginEnd="25dp"
+        android:text="@string/active_desk"
+        app:layout_constraintLeft_toLeftOf="@id/tv_active_desk"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_active_desk" />
+
+
+    <TextView
+        android:id="@+id/circle_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_style_gray"
+        android:gravity="center"
+        android:text="3"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintLeft_toLeftOf="@id/circle_2"
+        app:layout_constraintTop_toBottomOf="@id/tv_active_desk_detail" />
+
+    <TextView
+        android:id="@+id/tv_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始赚钱"
+        android:textColor="#FDB700"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toBottomOf="@id/circle_3"
+        app:layout_constraintLeft_toLeftOf="@id/tv_active_desk"
+        app:layout_constraintTop_toTopOf="@id/circle_3" />
+
+    <TextView
+        android:id="@+id/tv_start_detail"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:text="@string/start_gain"
+        app:layout_constraintLeft_toLeftOf="@id/tv_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_start" />
+
+    <Button
+        android:id="@+id/bt_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bt_start_style"
+        android:text="开始"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_start_detail" />
+
+    <TextView
+        android:id="@+id/tv_more_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="了解更多"
+        android:textColor="#FDB700"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_start" />
+</android.support.constraint.ConstraintLayout>

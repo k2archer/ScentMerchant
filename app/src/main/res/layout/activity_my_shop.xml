@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MyShopActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#b9b6b6" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:padding="2dp"
+                android:text="我的"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_shop_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:paddingBottom="20sp"
+            android:text="@string/testing_shop_name"
+            android:textSize="22sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_title" />
+
+        <TextView
+            android:id="@+id/tv_shop_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID: 102934556"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_shop_name"
+            app:layout_constraintBottom_toBottomOf="@id/tv_shop_name" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text=" › "
+            android:textSize="45dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_shop_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_shop_name" />
+
+        <View
+            android:id="@+id/v_bar_1"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_marginTop="20dp"
+            android:background="#E9E9E9"
+            app:layout_constraintTop_toBottomOf="@id/tv_shop_id" />
+
+        <TextView
+            android:id="@+id/tv_income_notify_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:paddingBottom="20sp"
+            android:text="结算通知"
+            android:textSize="22sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_bar_1" />
+
+        <TextView
+            android:id="@+id/tv_income_notify_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当结算收益后，给我发送通知提醒消息"
+            app:layout_constraintLeft_toLeftOf="@id/tv_income_notify_title"
+            app:layout_constraintBottom_toBottomOf="@id/tv_income_notify_title" />
+
+        <Switch
+            android:id="@+id/s_income_notify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:showText="false"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_income_notify_hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_income_notify_title" />
+
+        <View
+            android:id="@+id/v_bar_2"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#b9b6b6"
+            app:layout_constraintLeft_toLeftOf="@id/tv_income_notify_hint"
+            app:layout_constraintTop_toBottomOf="@id/tv_income_notify_hint" />
+
+        <TextView
+            android:id="@+id/tv_alter_shop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:text="修改店铺信息"
+            android:textSize="22sp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="@id/v_bar_2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_bar_2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text=" › "
+            android:textSize="45dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_alter_shop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_alter_shop" />
+
+        <View
+            android:id="@+id/v_bar_3"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#b9b6b6"
+            app:layout_constraintLeft_toLeftOf="@id/tv_alter_shop"
+            app:layout_constraintTop_toBottomOf="@id/tv_alter_shop" />
+
+        <TextView
+            android:id="@+id/tv_alter_administrator"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:text="修改管理员"
+            android:textSize="22sp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="@id/v_bar_3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_bar_3" />
+
+        <TextView
+            android:id="@+id/tv_sign_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:text=" › "
+            android:textSize="45dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_alter_administrator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_alter_administrator" />
+
+        <View
+            android:id="@+id/v_bar_4"
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:background="#dfdcdc"
+            app:layout_constraintTop_toBottomOf="@id/tv_alter_administrator" />
+
+
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:text="常见问题"
+            android:textSize="22sp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="@id/tv_alter_administrator"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_bar_4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:text=" › "
+            android:textSize="45dp"
+
+            app:layout_constraintBottom_toBottomOf="@id/tv_question"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_question" />
+
+
+        <TextView
+            android:id="@+id/tv_customer_service"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:text="咨询客服"
+            android:textSize="22sp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="@id/tv_question"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_question" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:text=" › "
+            android:textSize="45dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_customer_service"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_customer_service" />
+
+        <View
+            android:id="@+id/v_bar_5"
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:background="#dfdcdc"
+            app:layout_constraintTop_toBottomOf="@id/tv_customer_service" />
+
+        <TextView
+            android:id="@+id/tv_change_shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:text="切换店铺"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_bar_5" />
+
+        <View
+            android:id="@+id/v_bar_6"
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_marginTop="8dp"
+            android:background="#dfdcdc"
+            app:layout_constraintTop_toBottomOf="@id/tv_change_shop" />
+
+        <TextView
+            android:id="@+id/tv_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:text="退出"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_bar_6" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

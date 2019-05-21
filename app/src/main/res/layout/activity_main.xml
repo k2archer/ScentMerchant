@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FDB700"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#b9b6b6" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:padding="2dp"
+            android:text="有贴商家"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FDB700">
+
+        <android.support.constraint.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom" />
+
+        <TextView
+            android:id="@+id/tv_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="蜜小屋(万达广场店)"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tv_shop_name"
+            android:text=" ›"
+            android:textColor="@android:color/white"
+            android:textSize="50sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_shop_name"
+            app:layout_constraintLeft_toRightOf="@id/tv_shop_name"
+            app:layout_constraintTop_toTopOf="@id/tv_shop_name"
+            app:layout_constraintVertical_bias="0.655" />
+
+        <TextView
+            android:id="@+id/tv_toady_income_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_shop_name"
+            android:layout_marginTop="16dp"
+            android:text="今日收益"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_shop_name" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_income"
+            android:layout_marginTop="2dp"
+            android:layout_toLeftOf="@id/tv_income"
+            android:text=" ¥ "
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintRight_toLeftOf="@id/tv_income"
+            app:layout_constraintTop_toTopOf="@id/tv_income" />
+
+        <TextView
+            android:id="@+id/tv_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_toady_income_title"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="30dp"
+            android:text="15."
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@id/barrier_bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_toady_income_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_income"
+            android:layout_toRightOf="@id/tv_income"
+            android:paddingBottom="2dp"
+            android:text="00"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_income"
+            app:layout_constraintLeft_toRightOf="@id/tv_income" />
+
+        <android.support.constraint.Barrier
+            android:id="@+id/barrier_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="top" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp">
+
+        <Button
+            android:id="@+id/tv_sticker_income"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/bt_sticker_income"
+            app:layout_constraintEnd_toStartOf="@id/bt_income_record"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="桌贴收益"
+            app:layout_constraintEnd_toEndOf="@id/tv_sticker_income"
+            app:layout_constraintStart_toStartOf="@id/tv_sticker_income"
+            app:layout_constraintTop_toBottomOf="@id/tv_sticker_income" />
+
+        <Button
+            android:id="@+id/bt_income_record"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/bt_income_record"
+            app:layout_constraintEnd_toStartOf="@id/bt_notification"
+            app:layout_constraintStart_toEndOf="@id/tv_sticker_income" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="结算记录"
+            app:layout_constraintLeft_toLeftOf="@+id/bt_income_record"
+            app:layout_constraintRight_toRightOf="@id/bt_income_record"
+            app:layout_constraintTop_toBottomOf="@id/bt_income_record" />
+
+        <Button
+            android:id="@+id/bt_notification"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/bt_notification"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/bt_income_record" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="消息通知"
+            app:layout_constraintEnd_toEndOf="@id/bt_notification"
+            app:layout_constraintStart_toStartOf="@id/bt_notification"
+            app:layout_constraintTop_toBottomOf="@id/bt_notification" />
+
+
+        <Button
+            android:id="@+id/bt_scan"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bt_scan"
+            app:layout_constraintEnd_toEndOf="@id/tv_sticker_income"
+            app:layout_constraintStart_toStartOf="@id/tv_sticker_income"
+            app:layout_constraintTop_toBottomOf="@id/tv_sticker_income" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="扫一扫"
+            app:layout_constraintEnd_toEndOf="@id/bt_scan"
+            app:layout_constraintStart_toStartOf="@id/bt_scan"
+            app:layout_constraintTop_toBottomOf="@id/bt_scan" />
+
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/tv_more"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bt_more"
+            app:layout_constraintEnd_toEndOf="@id/bt_income_record"
+            app:layout_constraintStart_toStartOf="@id/bt_income_record"
+            app:layout_constraintTop_toBottomOf="@id/bt_income_record" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="更多"
+            app:layout_constraintEnd_toEndOf="@id/tv_more"
+            app:layout_constraintStart_toStartOf="@id/tv_more"
+            app:layout_constraintTop_toBottomOf="@id/tv_more" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</LinearLayout>

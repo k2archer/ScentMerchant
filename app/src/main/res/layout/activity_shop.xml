@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShopActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:id="@+id/ll_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#b9b6b6" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:padding="2dp"
+                android:text="店铺信息"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_shop_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="店铺名"
+            android:textSize="22sp"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/ed_shop_name"
+            app:layout_constraintTop_toBottomOf="@id/ll_title" />
+
+        <EditText
+            android:id="@+id/ed_shop_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="@string/testing_shop_name"
+            android:textSize="22sp"
+
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_shop_name"
+            app:layout_constraintHorizontal_weight="5"
+            app:layout_constraintLeft_toRightOf="@id/tv_shop_name"
+            app:layout_constraintRight_toLeftOf="@id/tv_chain_width_3" />
+
+        <TextView
+            android:id="@+id/tv_chain_width_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textSize="22sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tv_shop_name"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/ed_shop_name"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:background="#b9b6b6"
+            app:layout_constraintTop_toBottomOf="@id/tv_shop_name" />
+
+        <TextView
+            android:id="@+id/tv_shop_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="地址"
+            android:textSize="22sp"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintLeft_toLeftOf="@id/tv_shop_name"
+            app:layout_constraintRight_toLeftOf="@id/ed_shop_name"
+            app:layout_constraintRight_toRightOf="@id/tv_shop_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_shop_name" />
+
+        <EditText
+            android:id="@+id/ed_shop_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:maxLines="2"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="广东省广州市天河区"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_shop_address"
+            app:layout_constraintHorizontal_weight="5"
+            app:layout_constraintLeft_toRightOf="@id/tv_shop_address"
+            app:layout_constraintRight_toLeftOf="@id/tv_shop_address_go"
+            app:layout_constraintTop_toTopOf="@id/tv_shop_address" />
+
+        <TextView
+            android:id="@+id/tv_shop_address_go"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="›"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="@id/ed_shop_address"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/ed_shop_address"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ed_shop_address" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:background="#b9b6b6"
+            app:layout_constraintTop_toBottomOf="@id/ed_shop_address" />
+
+        <TextView
+            android:id="@+id/tv_shop_food_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="菜系"
+            android:textSize="22sp"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintLeft_toLeftOf="@id/tv_shop_address"
+            app:layout_constraintRight_toLeftOf="@id/sp_shop_food_type"
+            app:layout_constraintRight_toRightOf="@id/tv_shop_address"
+            app:layout_constraintTop_toBottomOf="@id/tv_shop_address" />
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/sp_shop_food_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="最多选择2个菜系"
+            android:spinnerMode="dialog"
+            android:maxLines="2"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text=""
+            android:textSize="22sp"
+            android:entries="@array/food_types"
+            app:layout_constraintHorizontal_weight="5"
+            app:layout_constraintLeft_toRightOf="@id/tv_shop_food_type"
+            app:layout_constraintRight_toLeftOf="@id/tv_shop_food_type_1"
+            app:layout_constraintBottom_toBottomOf="@id/tv_shop_food_type"
+            app:layout_constraintTop_toTopOf="@id/tv_shop_food_type" />
+
+        <!--
+        <EditText
+            android:id="@+id/ed_shop_food_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="最多选择2个菜系"
+            android:maxLines="2"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text=""
+            android:textSize="22sp"
+            app:layout_constraintHorizontal_weight="5"
+            app:layout_constraintLeft_toRightOf="@id/tv_shop_food_type"
+            app:layout_constraintRight_toLeftOf="@id/tv_shop_food_type_1"
+            app:layout_constraintTop_toTopOf="@id/tv_shop_food_type" />
+        -->
+
+        <TextView
+            android:id="@+id/tv_shop_food_type_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="›"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="@id/sp_shop_food_type"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/sp_shop_food_type"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/sp_shop_food_type" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:background="#b9b6b6"
+            app:layout_constraintTop_toBottomOf="@id/tv_shop_food_type" />
+
+        <TextView
+            android:id="@+id/tv_shop_table_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="桌位数"
+            android:textSize="22sp"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintLeft_toLeftOf="@id/tv_shop_food_type"
+            app:layout_constraintRight_toLeftOf="@id/ed_shop_table_amount"
+            app:layout_constraintRight_toRightOf="@id/tv_shop_food_type"
+            app:layout_constraintTop_toBottomOf="@id/tv_shop_food_type" />
+
+        <EditText
+            android:id="@+id/ed_shop_table_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="输入桌位数"
+            android:inputType="number"
+            android:maxLines="2"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text=""
+            android:textSize="22sp"
+            app:layout_constraintHorizontal_weight="5"
+            app:layout_constraintLeft_toRightOf="@id/tv_shop_table_amount"
+            app:layout_constraintRight_toLeftOf="@id/tv_shop_table_amount_1"
+            app:layout_constraintTop_toTopOf="@id/tv_shop_table_amount" />
+
+        <TextView
+            android:id="@+id/tv_shop_table_amount_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="@id/ed_shop_table_amount"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/ed_shop_table_amount"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ed_shop_table_amount" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:background="#b9b6b6"
+            app:layout_constraintTop_toBottomOf="@id/ed_shop_table_amount" />
+
+
+        <TextView
+            android:id="@+id/tv_shop_per_person_consumption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="人均"
+            android:textSize="22sp"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintLeft_toLeftOf="@id/tv_shop_table_amount"
+            app:layout_constraintRight_toLeftOf="@id/ed_average_consumption"
+            app:layout_constraintRight_toRightOf="@id/tv_shop_table_amount"
+            app:layout_constraintTop_toBottomOf="@id/tv_shop_table_amount" />
+
+        <EditText
+            android:id="@+id/ed_average_consumption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="输入人均消费"
+            android:inputType="number"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="22sp"
+            app:layout_constraintHorizontal_weight="5"
+            app:layout_constraintLeft_toRightOf="@id/tv_shop_per_person_consumption"
+            app:layout_constraintRight_toLeftOf="@id/tv_shop_per_person_consumption_1"
+            app:layout_constraintTop_toTopOf="@id/tv_shop_per_person_consumption" />
+
+        <TextView
+            android:id="@+id/tv_shop_per_person_consumption_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="元"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="@id/ed_average_consumption"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/ed_average_consumption"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ed_average_consumption" />
+
+        <View
+            android:id="@+id/tv_bar_5"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#f1eded"
+            app:layout_constraintTop_toBottomOf="@id/ed_average_consumption" />
+
+        <TextView
+            android:id="@+id/tv_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="环境照（至少2张，店铺门头照及环境照）"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_bar_5" />
+
+        <GridLayout
+            android:id="@+id/gl_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:columnCount="4"
+            app:layout_constraintTop_toBottomOf="@id/tv_photo">
+
+            <Button
+                android:layout_height="64dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="10dp"
+                android:background="@drawable/photo_bt_style" />
+
+            <Button
+                android:layout_height="64dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="10dp"
+                android:background="@drawable/photo_bt_style" />
+
+            <Button
+                android:layout_height="64dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="10dp"
+                android:background="@drawable/photo_bt_style" />
+
+            <Button
+                android:layout_height="64dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="10dp"
+                android:background="@drawable/photo_bt_style"
+                android:visibility="invisible" />
+
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/tv_shop_advanced_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="高级信息"
+            android:textSize="20sp"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintLeft_toLeftOf="@id/gl_"
+            app:layout_constraintRight_toLeftOf="@id/ed_shop_advanced_message"
+            app:layout_constraintRight_toRightOf="@id/gl_"
+            app:layout_constraintTop_toBottomOf="@id/gl_" />
+
+        <EditText
+            android:id="@+id/ed_shop_advanced_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="未填写"
+            android:maxLines="2"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text=""
+            android:textSize="22sp"
+            app:layout_constraintHorizontal_weight="5"
+            app:layout_constraintLeft_toRightOf="@id/tv_shop_advanced_message"
+            app:layout_constraintRight_toLeftOf="@id/tv_shop_advanced_message_1"
+            app:layout_constraintTop_toTopOf="@id/tv_shop_advanced_message" />
+
+        <TextView
+            android:id="@+id/tv_shop_advanced_message_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="›"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="@id/ed_shop_advanced_message"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/ed_shop_advanced_message"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ed_shop_advanced_message" />
+
+
+        <TextView
+            android:id="@+id/tv_advanced_info_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingTop="8dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="50dp"
+            android:background="#f1efef"
+            android:text="完善店铺高级信息，有助于加快审核及评估分成佣金比例。"
+            app:layout_constraintTop_toBottomOf="@id/tv_shop_advanced_message" />
+
+        <Button
+            android:id="@+id/bt_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="20dp"
+            android:text="提交审核"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_advanced_info_more" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@id/bt_submit"/>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
