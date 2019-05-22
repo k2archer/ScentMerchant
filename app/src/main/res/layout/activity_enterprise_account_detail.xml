@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.EnterpriseAccountDetailActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E5E5E5" />
+
+        <TextView
+            android:id="@+id/tv_back_sign"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingBottom="10dp"
+            android:text="‹"
+            android:textSize="50sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="企业和账户信息"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_account_type_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="账户类型"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_account_type"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_account_type"
+            app:layout_constraintTop_toTopOf="@id/tv_account_type" />
+
+        <TextView
+            android:id="@+id/tv_account_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:maxLines="2"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="对公账户"
+            android:textSize="20sp"
+            app:layout_constraintHorizontal_weight="4"
+            app:layout_constraintLeft_toRightOf="@id/tv_account_type_title"
+            app:layout_constraintRight_toLeftOf="@id/tv_account_type_title_go"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_account_type_title_go"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:text="›"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_account_type"
+            app:layout_constraintHorizontal_weight="0.5"
+            app:layout_constraintLeft_toRightOf="@id/tv_account_type"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_account_type" />
+
+
+        <TextView
+            android:id="@+id/tv_enterprise_account_name_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="企业/户名"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_enterprise_account_name"
+            app:layout_constraintLeft_toLeftOf="@id/tv_account_type_title"
+            app:layout_constraintTop_toTopOf="@id/tv_enterprise_account_name" />
+
+        <TextView
+            android:id="@+id/tv_enterprise_account_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:singleLine="true"
+            android:text="广州蜜小屋餐饮有限公司"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_account_type"
+            app:layout_constraintRight_toLeftOf="@id/tv_enterprise_account_name_title_go"
+            app:layout_constraintTop_toBottomOf="@id/tv_account_type" />
+
+        <TextView
+            android:id="@+id/tv_enterprise_account_name_title_go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:text="›"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_enterprise_account_name"
+            app:layout_constraintLeft_toLeftOf="@id/tv_account_type_title_go"
+            app:layout_constraintRight_toRightOf="@id/tv_account_type_title_go"
+            app:layout_constraintTop_toTopOf="@id/tv_enterprise_account_name" />
+
+
+        <TextView
+            android:id="@+id/tv_license_code_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="营业执照号"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_license_code"
+            app:layout_constraintLeft_toLeftOf="@id/tv_enterprise_account_name_title"
+            app:layout_constraintTop_toTopOf="@id/tv_license_code" />
+
+        <TextView
+            android:id="@+id/tv_license_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@null"
+            android:ellipsize="end"
+            android:hint="输入营业执照号或统一信用代码"
+            android:maxLines="2"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:singleLine="true"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_enterprise_account_name"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_enterprise_account_name" />
+
+        <View
+            android:id="@+id/v_bar_1"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#b9b6b6"
+            app:layout_constraintLeft_toLeftOf="@id/tv_enterprise_account_name_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_license_code" />
+
+        <TextView
+            android:id="@+id/tv_bank_name_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="开户行"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_bank_name"
+            app:layout_constraintLeft_toLeftOf="@id/tv_license_code_title"
+            app:layout_constraintTop_toTopOf="@id/tv_bank_name" />
+
+        <TextView
+            android:id="@+id/tv_bank_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ellipsize="end"
+            android:hint="选择开户行"
+            android:maxLines="2"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_license_code"
+            app:layout_constraintRight_toLeftOf="@id/tv_bank_name_title_go"
+            app:layout_constraintTop_toBottomOf="@id/tv_license_code" />
+
+        <TextView
+            android:id="@+id/tv_bank_name_title_go"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:text="›"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_bank_name"
+            app:layout_constraintLeft_toLeftOf="@id/tv_enterprise_account_name_title_go"
+            app:layout_constraintRight_toRightOf="@id/tv_enterprise_account_name_title_go"
+            app:layout_constraintTop_toTopOf="@id/tv_bank_name" />
+
+        <View
+            android:id="@+id/v_bar_2"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#b9b6b6"
+            app:layout_constraintLeft_toLeftOf="@id/tv_bank_name_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_bank_name" />
+
+        <TextView
+            android:id="@+id/tv_bank_account_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="银行账号"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_bank_account"
+            app:layout_constraintLeft_toLeftOf="@id/tv_bank_name_title"
+            app:layout_constraintTop_toTopOf="@id/tv_bank_account" />
+
+        <TextView
+            android:id="@+id/tv_bank_account"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@null"
+            android:ellipsize="end"
+            android:hint="输入银行账号"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:singleLine="true"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_bank_name"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_bank_name" />
+
+        <View
+            android:id="@+id/v_bar_3"
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:background="#DCDCDC"
+            app:layout_constraintLeft_toLeftOf="@id/tv_bank_account_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_bank_account" />
+
+        <TextView
+            android:id="@+id/tv_permission_picture_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="许可证"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_bank_name_title"
+            app:layout_constraintTop_toTopOf="@id/iv_permission_picture" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_permission_picture"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/picture_style"
+            app:layout_constraintLeft_toLeftOf="@id/tv_bank_account"
+            app:layout_constraintTop_toBottomOf="@id/v_bar_3" />
+
+        <View
+            android:id="@+id/v_bar_4"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="#DCDCDC"
+            app:layout_constraintLeft_toLeftOf="@id/tv_permission_picture_title"
+            app:layout_constraintTop_toBottomOf="@id/iv_permission_picture" />
+
+        <TextView
+            android:id="@+id/tv_license_picture_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="营业执照"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_bank_name_title"
+            app:layout_constraintTop_toTopOf="@id/iv_license_picture" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_license_picture"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/picture_style"
+            app:layout_constraintLeft_toLeftOf="@id/tv_bank_account"
+            app:layout_constraintTop_toBottomOf="@id/v_bar_4" />
+
+        <View
+            android:id="@+id/v_bar_5"
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:layout_marginTop="10dp"
+            android:background="#ecebeb"
+            app:layout_constraintTop_toBottomOf="@id/iv_license_picture" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/enterprise_data_declaration"
+            app:layout_constraintEnd_toEndOf="@id/v_bar_5"
+            app:layout_constraintStart_toStartOf="@id/v_bar_5"
+            app:layout_constraintTop_toTopOf="@id/v_bar_5" />
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="提交审核"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toTopOf="@id/bar_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_bar_5" />
+
+        <android.support.constraint.Barrier
+            android:id="@+id/bar_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="top" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
