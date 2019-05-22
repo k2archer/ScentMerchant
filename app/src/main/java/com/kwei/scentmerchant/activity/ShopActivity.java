@@ -14,6 +14,7 @@ import com.kwei.scentmerchant.R;
 import com.kwei.scentmerchant.bean.ShopBean;
 import com.kwei.scentmerchant.StartActivity;
 
+import butterknife.BindArray;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -38,6 +39,9 @@ public class ShopActivity extends AppCompatActivity {
     @BindView(R.id.ed_shop_advanced_message)
     EditText edShopAdvancedMessage;
 
+    @BindArray(R.array.food_types)
+    String[] foodTypes;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,11 +53,8 @@ public class ShopActivity extends AppCompatActivity {
 
     @OnItemSelected(R.id.sp_shop_food_type)
     public void onFoodTypeSelected(AdapterView<?> parent, View view, int position, long id) {
-        String[] languages = getResources().getStringArray(R.array.food_types);
-        Toast.makeText(ShopActivity.this,
-                "你点击的是:" + languages[position], Toast.LENGTH_SHORT).show();
         if (shop != null) {
-            shop.foodType = languages[position];
+            shop.foodType = foodTypes[position];
         }
     }
 

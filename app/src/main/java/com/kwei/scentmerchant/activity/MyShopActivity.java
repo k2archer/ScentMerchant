@@ -8,6 +8,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import com.kwei.scentmerchant.R;
+import com.kwei.scentmerchant.StartActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -48,11 +49,10 @@ public class MyShopActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.tv_shop_name:
                 break;
-            case R.id.tv_shop_id:
-                break;
             case R.id.s_income_notify:
                 break;
             case R.id.tv_alter_shop:
+                startActivity(new Intent(this, ShopActivity.class));
                 break;
             case R.id.tv_alter_administrator:
                 startActivity(new Intent(this, AdministratorActivity.class));
@@ -62,7 +62,7 @@ public class MyShopActivity extends AppCompatActivity {
             case R.id.tv_customer_service:
                 break;
             case R.id.tv_change_shop:
-                startActivity(new Intent(this, ShopActivity.class));
+                startActivity(new Intent(this, StartActivity.class));
                 break;
             case R.id.tv_exit:
 
