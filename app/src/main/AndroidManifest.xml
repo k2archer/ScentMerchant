@@ -6,7 +6,6 @@
 
     <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- 自动聚焦权限 -->
 
-
     <!-- cn.yipianfengye.android:zxing-library:2.2 低版本 SDK 需要权限 -->
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
@@ -19,21 +18,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".StartActivity" />
-        <activity android:name=".activity.ShopActivity" />
-        <activity android:name=".ScanActivity" />
-        <activity android:name=".activity.StickerDetailActivity" />
-        <activity android:name=".activity.MyShopActivity" />
-        <activity android:name=".activity.AdministratorActivity" />
-        <activity android:name=".activity.StickerIncomeActivity">
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".StartActivity" />
+        <activity android:name=".activity.ShopActivity" />
+        <activity android:name=".activity.ScanActivity" />
+        <activity android:name=".activity.StickerDetailActivity" />
+        <activity android:name=".activity.MyShopActivity" />
+        <activity android:name=".activity.AdministratorActivity" />
+        <activity android:name=".activity.StickerIncomeActivity" />
+        <activity android:name=".activity.StatisticsActivity" />
+        <activity android:name=".activity.IncomeDetailActivity" />
+        <activity android:name=".activity.SettlementRecordActivity" />
+        <activity android:name=".activity.NotificationActivity"></activity>
+        <activity android:name=".activity.EnterpriseAccountDetailActivity" />
     </application>
 
 </manifest>
