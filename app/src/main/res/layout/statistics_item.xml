@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_statistics_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/tv_scan_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="微信扫码"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_scan_income"
+        app:layout_constraintTop_toTopOf="@id/tv_scan_income" />
+
+    <TextView
+        android:id="@+id/tv_scan_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:text="2019-5-20"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_scan_type"
+        app:layout_constraintRight_toRightOf="@id/tv_scan_income"
+        app:layout_constraintTop_toTopOf="@id/tv_scan_type" />
+
+    <TextView
+        android:id="@+id/tv_scan_income"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:gravity="center_vertical"
+        android:paddingTop="50sp"
+        android:paddingBottom="50sp"
+        android:text="¥ 2.08"
+        android:textColor="@android:color/black"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:text=" › "
+        android:textSize="45sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_scan_income"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_scan_income" />
+
+    <TextView
+        android:id="@+id/tv_adv_sharing_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="触发广告分成"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_scan_income"
+        app:layout_constraintLeft_toLeftOf="@id/tv_scan_income" />
+</android.support.constraint.ConstraintLayout>
