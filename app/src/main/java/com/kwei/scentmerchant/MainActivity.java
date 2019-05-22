@@ -16,7 +16,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.kwei.scentmerchant.activity.MyShopActivity;
+import com.kwei.scentmerchant.activity.NotificationActivity;
+import com.kwei.scentmerchant.activity.SettlementRecordActivity;
 import com.kwei.scentmerchant.activity.ShopActivity;
+import com.kwei.scentmerchant.activity.StickerIncomeActivity;
 import com.uuzuche.lib_zxing.activity.CaptureActivity;
 import com.uuzuche.lib_zxing.activity.CodeUtils;
 
@@ -59,11 +62,14 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.tv_sticker_income:
 //                setStyle(view);
+                startActivity(new Intent(this, StickerIncomeActivity.class));
                 break;
             case R.id.bt_income_record:
+                startActivity(new Intent(this, SettlementRecordActivity.class));
 //                setStyle(view);
                 break;
             case R.id.bt_notification:
+                startActivity(new Intent(this, NotificationActivity.class));
                 break;
             case R.id.tv_shop_name:
                 startActivity(new Intent(this, ShopActivity.class));
