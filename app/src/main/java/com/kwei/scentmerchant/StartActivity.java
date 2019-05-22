@@ -60,6 +60,7 @@ public class StartActivity extends AppCompatActivity {
             case R.id.tv_start:
                 intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
+                finish();
                 break;
             case R.id.bt_start:
                 break;

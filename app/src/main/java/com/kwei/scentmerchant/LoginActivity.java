@@ -56,6 +56,7 @@ public class LoginActivity extends AppCompatActivity {
         String VerificationCode = edLoginVerificationCode.getText().toString();
         if (accountPhone.equals("188") && VerificationCode.equals("188")) {
             startActivity(new Intent(this, StartActivity.class));
+            finish();
         } else {
             Toast.makeText(this, "账号或密码错误", Toast.LENGTH_SHORT).show();
         }
