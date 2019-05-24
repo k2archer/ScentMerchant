@@ -99,10 +99,10 @@ public class ShopActivity extends AppCompatActivity {
         shop.advancedMessage = edShopAdvancedMessage.getText().toString();
         shop.averageConsumption = Integer.valueOf(edShopAverageConsumption.getText().toString());
         shop.tableAmount = Integer.valueOf(edShopTableAmount.getText().toString());
-        shop.phones = getPhones();
+        shop.pictures = getPictures();
     }
 
-    private String[] getPhones() {
+    private String[] getPictures() {
         /// todo ... 读取 ImageView 照片文件名，添加进去
         return new String[0];
     }

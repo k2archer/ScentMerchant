@@ -2,12 +2,12 @@ package com.kwei.scentmerchant.contract;
 
 public interface LoginContract {
     interface LoginModel {
-        boolean getVerifyCode(String phone, LoginPresenter presenter);
-        void login(String phone, String verifyCode, LoginPresenter presenter);
+        boolean getVerifyCode(String mobile, LoginPresenter presenter);
+        void login(String mobile, String verifyCode, LoginPresenter presenter);
     }
 
     interface LoginView {
-        String getPhone();
+        String getMobile();
 
         String getVerifyCode();
 

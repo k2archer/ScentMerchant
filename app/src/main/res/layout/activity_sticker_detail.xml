@@ -214,19 +214,19 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_margin="10dp"
-                android:src="@drawable/phone_style" />
+                android:src="@drawable/mobile_style" />
 
             <ImageView
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_margin="10dp"
-                android:src="@drawable/phone_style" />
+                android:src="@drawable/mobile_style" />
 
             <ImageView
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_margin="10dp"
-                android:src="@drawable/phone_style" />
+                android:src="@drawable/mobile_style" />
         </LinearLayout>
 
         <View

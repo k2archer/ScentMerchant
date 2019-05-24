@@ -21,8 +21,8 @@ import butterknife.OnClick;
 
 public class LoginActivity extends AppCompatActivity implements LoginContract.LoginView {
 
-    @BindView(R.id.ed_login_phone)
-    EditText edLoginPhone;
+    @BindView(R.id.ed_login_mobile)
+    EditText edLoginMobile;
     @BindView(R.id.ed_login_verification_code)
     EditText edLoginVerificationCode;
     @BindView(R.id.bt_get_verification_code)
@@ -85,8 +85,8 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Lo
     }
 
     @Override
-    public String getPhone() {
-        return edLoginPhone.getText().toString();
+    public String getMobile() {
+        return edLoginMobile.getText().toString();
     }
 
     @Override

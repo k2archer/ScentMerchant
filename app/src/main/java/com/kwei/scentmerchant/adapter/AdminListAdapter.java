@@ -30,12 +30,12 @@ public class AdminListAdapter extends RecyclerView.Adapter<AdminListAdapter.Hold
 
     class Holder extends RecyclerView.ViewHolder {
         private TextView tvName;
-        private TextView tvPhone;
+        private TextView tvMobile;
 
         public Holder(@NonNull View itemView) {
             super(itemView);
             tvName = itemView.findViewById(R.id.tv_admin_name);
-            tvPhone = itemView.findViewById(R.id.tv_admin_phone);
+            tvMobile = itemView.findViewById(R.id.tv_admin_mobile);
         }
     }
 
@@ -49,7 +49,7 @@ public class AdminListAdapter extends RecyclerView.Adapter<AdminListAdapter.Hold
     @Override
     public void onBindViewHolder(@NonNull Holder viewHolder, int i) {
         viewHolder.tvName.setText(itemList.get(i).name);
-        viewHolder.tvPhone.setText(itemList.get(i).phone);
+        viewHolder.tvMobile.setText(itemList.get(i).mobile);
 
         viewHolder.tvName.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -59,7 +59,7 @@ public class AdministratorActivity extends AppCompatActivity {
 
         // start 仅测试用，随后删除
         admin.name = "陈*葭";
-        admin.phone = "1883****1035";
+        admin.mobile = "1883****1035";
         adminList.add(admin);
         // end
 

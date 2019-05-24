@@ -14,14 +14,14 @@ public class LoginPresenterImpl implements LoginContract.LoginPresenter {
     }
 
     public boolean getVerifyCode() {
-        String phone = loginView.getPhone();
-        return loginModel.getVerifyCode(phone, this);
+        String mobile = loginView.getMobile();
+        return loginModel.getVerifyCode(mobile, this);
     }
 
     public void login() {
-        String phone = loginView.getPhone();
+        String mobile = loginView.getMobile();
         String verifyCode = loginView.getVerifyCode();
-        loginModel.login(phone, verifyCode, this);
+        loginModel.login(mobile, verifyCode, this);
     }
 
     @Override

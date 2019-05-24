@@ -6,9 +6,9 @@ import com.kwei.scentmerchant.utils.ToolUtils;
 
 public class LoginModelImpl implements LoginContract.LoginModel {
     @Override
-    public boolean getVerifyCode(String phone, LoginContract.LoginPresenter presenter) {
+    public boolean getVerifyCode(String mobile, LoginContract.LoginPresenter presenter) {
 
-        if (!ToolUtils.isMobileNumber(phone)) {
+        if (!ToolUtils.isMobileNumber(mobile)) {
             presenter.onFail("请输入正确手机号");
             return false;
         }
@@ -30,9 +30,9 @@ public class LoginModelImpl implements LoginContract.LoginModel {
     }
 
     @Override
-    public void login(String phone, String verifyCode, LoginContract.LoginPresenter presenter) {
+    public void login(String mobile, String verifyCode, LoginContract.LoginPresenter presenter) {
 
-        if (!ToolUtils.isMobileNumber(phone)) {
+        if (!ToolUtils.isMobileNumber(mobile)) {
             presenter.onFail("请输入正确手机号");
             return;
         }
@@ -41,7 +41,7 @@ public class LoginModelImpl implements LoginContract.LoginModel {
             return;
         }
 
-        BaseMessage requestResult = requestLogin(phone, verifyCode);
+        BaseMessage requestResult = requestLogin(mobile, verifyCode);
         if (requestResult != null) {
             presenter.onFail(requestResult.message);
         } else {
@@ -49,7 +49,7 @@ public class LoginModelImpl implements LoginContract.LoginModel {
         }
     }
 
-    private BaseMessage requestLogin(String phone, String verifyCode) {
+    private BaseMessage requestLogin(String mobile, String verifyCode) {
         // todo 发送登录请求到远端服务器
         return null;
     }

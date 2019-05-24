@@ -6,6 +6,6 @@ public class ShopBean {
     public String foodType;
     public int tableAmount;
     public int averageConsumption;
-    public String[] phones;
+    public String[] pictures;
     public String advancedMessage;
 }
