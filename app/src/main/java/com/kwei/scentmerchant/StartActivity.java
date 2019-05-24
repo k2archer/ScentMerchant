@@ -97,7 +97,7 @@ public class StartActivity extends AppCompatActivity {
             if (bundle != null) {
                 if (bundle.getInt(CodeUtils.RESULT_TYPE) == CodeUtils.RESULT_SUCCESS) {
                     String result = bundle.getString(CodeUtils.RESULT_STRING);
-                    Toast.makeText(this, "解析结果:" + result, Toast.LENGTH_LONG).show();
+//                    Toast.makeText(this, "解析结果:" + result, Toast.LENGTH_LONG).show();
                     shop = new ShopBean();
                     shop.name = "巴雨山(新奥工美店)";
                     shop.address = "北京市东城区东华门街道正义路12号中华人民共和国";
