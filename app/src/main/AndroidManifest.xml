@@ -18,26 +18,54 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".LoginActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".StartActivity" />
-        <activity android:name=".activity.ShopActivity" />
-        <activity android:name=".activity.ScanActivity" />
-        <activity android:name=".activity.StickerDetailActivity" />
-        <activity android:name=".activity.MyShopActivity" />
-        <activity android:name=".activity.AdministratorActivity" />
-        <activity android:name=".activity.StickerIncomeActivity" />
-        <activity android:name=".activity.StatisticsActivity" />
-        <activity android:name=".activity.IncomeDetailActivity" />
-        <activity android:name=".activity.SettlementRecordActivity" />
-        <activity android:name=".activity.NotificationActivity"></activity>
-        <activity android:name=".activity.EnterpriseAccountDetailActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".StartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ShopActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ScanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.StickerDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyShopActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AdministratorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.StickerIncomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.StatisticsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.IncomeDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SettlementRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NotificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EnterpriseAccountDetailActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
