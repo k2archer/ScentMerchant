@@ -1,8 +1,17 @@
 package com.kwei.scentmerchant.model;
 
-import com.kwei.scentmerchant.bean.BaseMessage;
 import com.kwei.scentmerchant.contract.LoginContract;
+import com.kwei.scentmerchant.model.bean.BaseMessage;
+import com.kwei.scentmerchant.model.bean.LoginBody;
+import com.kwei.scentmerchant.model.bean.RequestVerifyCodeBody;
+import com.kwei.scentmerchant.model.retrofit.RetrofitFactory;
 import com.kwei.scentmerchant.utils.ToolUtils;
+
+import io.reactivex.Observable;
+import io.reactivex.Observer;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
 
 public class LoginModelImpl implements LoginContract.LoginModel {
     @Override
@@ -13,20 +22,38 @@ public class LoginModelImpl implements LoginContract.LoginModel {
             return false;
         }
 
-        BaseMessage requestResult = requestSendVerifyCode();
-        if (requestResult != null) {
-            presenter.onFail(requestResult.message);
-            return false;
-        } else {
-            presenter.onFail("验证短信已发送");
-        }
+        requestSendVerifyCode(mobile, presenter);
 
         return true;
     }
 
-    private BaseMessage requestSendVerifyCode() {
-        // todo 发送申请验证码请求到远端服务器
-        return null;
+    private void requestSendVerifyCode(String mobile, LoginContract.LoginPresenter presenter) {
+        RequestVerifyCodeBody body = new RequestVerifyCodeBody(mobile);
+        Observable<BaseMessage> observable = RetrofitFactory.getApiService().requestVerifyCode(body);
+
+        observable.subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<BaseMessage>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(BaseMessage baseMessage) {
+                        presenter.onFail(baseMessage.message);
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        presenter.onFail(e.getMessage());
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
     }
 
     @Override
@@ -41,17 +68,40 @@ public class LoginModelImpl implements LoginContract.LoginModel {
             return;
         }
 
-        BaseMessage requestResult = requestLogin(mobile, verifyCode);
-        if (requestResult != null) {
-            presenter.onFail(requestResult.message);
-        } else {
-            presenter.onSuccess();
-        }
+        requestLogin(mobile, verifyCode, presenter);
     }
 
-    private BaseMessage requestLogin(String mobile, String verifyCode) {
-        // todo 发送登录请求到远端服务器
-        return null;
+    private void requestLogin(String mobile, String verifyCode, LoginContract.LoginPresenter presenter) {
+        LoginBody loginBody = new LoginBody(mobile, verifyCode);
+        Observable<BaseMessage> observable = RetrofitFactory.getApiService().login(loginBody);
+
+        observable.subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<BaseMessage>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(BaseMessage baseMessage) {
+                        if (baseMessage.isSucceed.equals("true")) {
+                            presenter.onSuccess();
+                        } else {
+                            presenter.onFail(baseMessage.message);
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        presenter.onFail(e.getMessage());
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
     }
 
     private boolean verifyVerifyCode(String code) {
