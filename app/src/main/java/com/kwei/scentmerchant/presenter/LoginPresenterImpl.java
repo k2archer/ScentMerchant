@@ -33,4 +33,9 @@ public class LoginPresenterImpl implements LoginContract.LoginPresenter {
     public void onFail(String message) {
         loginView.onFail(message);
     }
+
+    @Override
+    public void showToast(String message) {
+        loginView.showToast(message);
+    }
 }

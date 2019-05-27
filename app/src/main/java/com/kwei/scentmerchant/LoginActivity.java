@@ -104,4 +104,9 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Lo
     public void onFail(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
+
+    @Override
+    public void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
 }
