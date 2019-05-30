@@ -4,6 +4,7 @@ package com.kwei.scentmerchant.model.retrofit;
 import android.net.ParseException;
 
 import com.google.gson.JsonParseException;
+import com.google.gson.stream.MalformedJsonException;
 
 import org.json.JSONException;
 
@@ -11,7 +12,7 @@ import java.net.ConnectException;
 import java.net.SocketTimeoutException;
 
 
-public class ExecptionUtils {
+public class ExceptionUtils {
 
     /**
      * HTTP 状态码
@@ -88,7 +89,8 @@ public class ExecptionUtils {
             }
         } else if (e instanceof JsonParseException
                 || e instanceof JSONException
-                || e instanceof ParseException) {
+                || e instanceof ParseException
+                || e instanceof MalformedJsonException) {
             // 均视为解析错误
             exceptionMessage = "解析错误";
         } else if (e instanceof ConnectException) {
