@@ -5,7 +5,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitFactory {
-    private static final String BASE_URL = "http://192.168.0.153:8080/";
+    public static final String BASE_URL = "http://192.168.0.153:8080/ScentMerchantWeb/";
     private static ApiService apiService = new Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())

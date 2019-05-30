@@ -1,5 +1,6 @@
 package com.kwei.scentmerchant.model;
 
+import com.google.gson.Gson;
 import com.kwei.scentmerchant.contract.LoginContract;
 import com.kwei.scentmerchant.model.bean.BaseMessage;
 import com.kwei.scentmerchant.model.bean.LoginBody;
@@ -30,7 +31,8 @@ public class LoginModelImpl implements LoginContract.LoginModel {
 
     private void requestSendVerifyCode(String mobile, LoginContract.LoginPresenter presenter) {
         RequestVerifyCodeBody body = new RequestVerifyCodeBody(mobile);
-        Observable<BaseMessage> observable = RetrofitFactory.getApiService().requestVerifyCode(body);
+        Gson gson = new Gson();
+        Observable<BaseMessage> observable = RetrofitFactory.getApiService().requestVerifyCode(gson.toJson(body));
 
         observable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -74,7 +76,8 @@ public class LoginModelImpl implements LoginContract.LoginModel {
 
     private void requestLogin(String mobile, String verifyCode, LoginContract.LoginPresenter presenter) {
         LoginBody loginBody = new LoginBody(mobile, verifyCode);
-        Observable<BaseMessage> observable = RetrofitFactory.getApiService().login(loginBody);
+        Gson gson = new Gson();
+        Observable<BaseMessage> observable = RetrofitFactory.getApiService().login(gson.toJson(loginBody));
 
         observable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
