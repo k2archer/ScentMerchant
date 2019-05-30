@@ -119,7 +119,9 @@ public class StartActivity extends AppCompatActivity {
 //                    Toast.makeText(this, "解析结果:" + result, Toast.LENGTH_LONG).show();
                     tvStart.setEnabled(true);
                     // 显示广告贴纸信息
-                    startActivity(new Intent(this, StickerDetailActivity.class));
+                    Intent intent = new Intent(this, StickerDetailActivity.class);
+                    intent.putExtra("sticker_url", result);
+                    startActivityForResult(intent, ACTIVE_STICKER_CODE);
                 } else if (bundle.getInt(CodeUtils.RESULT_TYPE) == CodeUtils.RESULT_FAILED) {
                     Toast.makeText(this, "解析二维码失败", Toast.LENGTH_LONG).show();
                 }

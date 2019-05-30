@@ -14,6 +14,7 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
+import retrofit2.http.Url;
 
 public interface ApiService {
     @POST("login")
@@ -27,5 +28,9 @@ public interface ApiService {
     @Multipart
     @POST("addNewShop")
     Observable<BaseMessage> addNewShop(@Part List<MultipartBody.Part> partList);
+
+    @FormUrlEncoded
+    @POST()
+    Observable<BaseMessage> activateSticker(@Url String url, @Field("body") String body);
 
 }
