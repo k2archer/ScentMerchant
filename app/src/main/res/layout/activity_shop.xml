@@ -323,38 +323,41 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:columnCount="4"
+            android:columnCount="3"
             app:layout_constraintTop_toBottomOf="@id/tv_photo">
 
-            <Button
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/ib_photo_1"
                 android:layout_height="64dp"
-                android:layout_columnWeight="1"
+                android:layout_width="64dp"
                 android:layout_margin="10dp"
                 android:background="@drawable/photo_bt_style" />
 
-            <Button
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/ib_photo_2"
                 android:layout_height="64dp"
-                android:layout_columnWeight="1"
+                android:layout_width="64dp"
                 android:layout_margin="10dp"
                 android:background="@drawable/photo_bt_style" />
 
-            <Button
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/ib_photo_3"
                 android:layout_height="64dp"
-                android:layout_columnWeight="1"
+                android:layout_width="64dp"
                 android:layout_margin="10dp"
                 android:background="@drawable/photo_bt_style" />
 
-            <Button
-                android:layout_height="64dp"
-                android:layout_columnWeight="1"
-                android:layout_margin="10dp"
-                android:background="@drawable/photo_bt_style"
-                android:visibility="invisible" />
+            <!--<Button-->
+                <!--android:layout_height="64dp"-->
+                <!--android:layout_columnWeight="1"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:background="@drawable/photo_bt_style"-->
+                <!--android:visibility="invisible" />-->
 
         </GridLayout>
 
         <TextView
-            android:id="@+id/tv_shop_advanced_message"
+            android:id="@+id/tv_shop_exclusive_message"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
@@ -364,12 +367,12 @@
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintHorizontal_weight="2"
             app:layout_constraintLeft_toLeftOf="@id/gl_"
-            app:layout_constraintRight_toLeftOf="@id/ed_shop_advanced_message"
+            app:layout_constraintRight_toLeftOf="@id/ed_shop_exclusive_message"
             app:layout_constraintRight_toRightOf="@id/gl_"
             app:layout_constraintTop_toBottomOf="@id/gl_" />
 
         <EditText
-            android:id="@+id/ed_shop_advanced_message"
+            android:id="@+id/ed_shop_exclusive_message"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@null"
@@ -380,22 +383,22 @@
             android:text=""
             android:textSize="22sp"
             app:layout_constraintHorizontal_weight="5"
-            app:layout_constraintLeft_toRightOf="@id/tv_shop_advanced_message"
-            app:layout_constraintRight_toLeftOf="@id/tv_shop_advanced_message_1"
-            app:layout_constraintTop_toTopOf="@id/tv_shop_advanced_message" />
+            app:layout_constraintLeft_toRightOf="@id/tv_shop_exclusive_message"
+            app:layout_constraintRight_toLeftOf="@id/tv_shop_exclusive_message_1"
+            app:layout_constraintTop_toTopOf="@id/tv_shop_exclusive_message" />
 
         <TextView
-            android:id="@+id/tv_shop_advanced_message_1"
+            android:id="@+id/tv_shop_exclusive_message_1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="›"
             android:textSize="35sp"
-            app:layout_constraintBottom_toBottomOf="@id/ed_shop_advanced_message"
+            app:layout_constraintBottom_toBottomOf="@id/ed_shop_exclusive_message"
             app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintLeft_toRightOf="@id/ed_shop_advanced_message"
+            app:layout_constraintLeft_toRightOf="@id/ed_shop_exclusive_message"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@id/ed_shop_advanced_message" />
+            app:layout_constraintTop_toTopOf="@id/ed_shop_exclusive_message" />
 
 
         <TextView
@@ -408,7 +411,7 @@
             android:paddingBottom="50dp"
             android:background="#f1efef"
             android:text="完善店铺高级信息，有助于加快审核及评估分成佣金比例。"
-            app:layout_constraintTop_toBottomOf="@id/tv_shop_advanced_message" />
+            app:layout_constraintTop_toBottomOf="@id/tv_shop_exclusive_message" />
 
         <Button
             android:id="@+id/bt_submit"
