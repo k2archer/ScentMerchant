@@ -96,7 +96,9 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Lo
 
     @Override
     public void onSuccess() {
-        startActivity(new Intent(this, StartActivity.class));
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("login_mobile", edLoginMobile.getText().toString());
+        startActivity(intent);
         finish();
     }
 
@@ -108,5 +110,13 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Lo
     @Override
     public void showToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void newMerchant() {
+        Intent intent = new Intent(this, StartActivity.class);
+        intent.putExtra("login_mobile", edLoginMobile.getText().toString());
+        startActivity(intent);
+        finish();
     }
 }

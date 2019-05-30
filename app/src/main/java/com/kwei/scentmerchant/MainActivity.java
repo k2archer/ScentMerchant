@@ -42,16 +42,17 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.tv_more)
     AppCompatButton tvMore;
 
+    String mobile = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-//        init();
+        init();
     }
 
     private void init() {
-
+        mobile = getIntent().getStringExtra("login_mobile");
     }
 
     int lastClicked = -1;

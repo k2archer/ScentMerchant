@@ -5,7 +5,7 @@ import com.kwei.scentmerchant.contract.LoginContract;
 import com.kwei.scentmerchant.model.bean.BaseMessage;
 import com.kwei.scentmerchant.model.bean.LoginBody;
 import com.kwei.scentmerchant.model.bean.RequestVerifyCodeBody;
-import com.kwei.scentmerchant.model.retrofit.ExecptionUtils;
+import com.kwei.scentmerchant.model.retrofit.ExceptionUtils;
 import com.kwei.scentmerchant.model.retrofit.RetrofitFactory;
 import com.kwei.scentmerchant.utils.ToolUtils;
 
@@ -90,7 +90,11 @@ public class LoginModelImpl implements LoginContract.LoginModel {
                     @Override
                     public void onNext(BaseMessage baseMessage) {
                         if (baseMessage.isSucceed.equals("true")) {
-                            presenter.onSuccess();
+                            if (baseMessage.message.equals("OK")) {
+                                presenter.onSuccess();
+                            } else {
+                                presenter.newMerchant();
+                            }
                         } else {
                             presenter.showToast(baseMessage.message);
                         }
@@ -98,7 +102,7 @@ public class LoginModelImpl implements LoginContract.LoginModel {
 
                     @Override
                     public void onError(Throwable e) {
-                        String message = ExecptionUtils.handleException(e);
+                        String message = ExceptionUtils.handleException(e);
                         presenter.onFail(message);
                     }
 

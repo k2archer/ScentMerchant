@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.kwei.scentmerchant.R;
+import com.kwei.scentmerchant.StartActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,6 +26,10 @@ public class StickerDetailActivity extends AppCompatActivity {
 
     @OnClick(R.id.tv_active_sticker)
     public void onViewClicked() {
-        onBackPressed();
+        Intent intent = new Intent();
+        Bundle bundle = new Bundle();
+        intent.putExtras(bundle);
+        setResult(StartActivity.ACTIVE_STICKER_CODE, intent);
+        finish();
     }
 }

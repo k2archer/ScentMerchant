@@ -38,4 +38,9 @@ public class LoginPresenterImpl implements LoginContract.LoginPresenter {
     public void showToast(String message) {
         loginView.showToast(message);
     }
+
+    @Override
+    public void newMerchant() {
+        loginView.newMerchant();
+    }
 }

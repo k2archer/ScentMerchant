@@ -18,6 +18,8 @@ public interface LoginContract {
         void onFail(String message);
 
         void showToast(String message);
+
+        void newMerchant();
     }
 
     interface LoginPresenter {
@@ -26,5 +28,7 @@ public interface LoginContract {
         void onFail(String message);
 
         void showToast(String message);
+
+        void newMerchant();
     }
 }
