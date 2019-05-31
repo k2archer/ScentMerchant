@@ -2,6 +2,7 @@ package com.kwei.scentmerchant.presenter;
 
 import com.kwei.scentmerchant.contract.StickerContract;
 import com.kwei.scentmerchant.model.StickerModelImpl;
+import com.kwei.scentmerchant.model.bean.StickerDetail;
 
 public class StickerPresenter implements StickerContract.StickerPresenter {
 
@@ -24,8 +25,18 @@ public class StickerPresenter implements StickerContract.StickerPresenter {
     }
 
     @Override
+    public void getStickerDetail(String url) {
+        stickerModel.getStickerDetail(url,this);
+    }
+
+    @Override
+    public void showStickerDetail(StickerDetail sticker) {
+        stickerView.showStickerDetail(sticker);
+    }
+
+    @Override
     public void activateSticker() {
-        stickerModel.activateSticker(stickerView.getStickerUrl(), this);
+        stickerModel.activateSticker(stickerView.getStickerId(), this);
     }
 
     @Override
