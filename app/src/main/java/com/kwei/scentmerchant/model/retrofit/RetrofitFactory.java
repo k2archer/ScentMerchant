@@ -23,7 +23,7 @@ public class RetrofitFactory {
         return apiService;
     }
 
-    public static void subscribe(Observable<BaseMessage> observable, Observer<BaseMessage> observer) {
+    public static <T> void subscribe(Observable<T> observable, Observer<T> observer) {
         observable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(observer);
