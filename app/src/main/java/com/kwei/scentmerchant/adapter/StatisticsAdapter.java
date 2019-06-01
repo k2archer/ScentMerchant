@@ -54,7 +54,7 @@ public class StatisticsAdapter extends RecyclerView.Adapter<StatisticsAdapter.Ho
     public void onBindViewHolder(@NonNull Holder holder, int i) {
         holder.tvScanType.setText(itemList.get(i).scanType);
         holder.tvScanDate.setText(itemList.get(i).scanDate);
-        holder.tvScanIncome.setText(itemList.get(i).scanIncom);
+        holder.tvScanIncome.setText(itemList.get(i).scanIncome);
         holder.tvAdvSharingType.setText(itemList.get(i).advSharingType);
 
         holder.tvScanIncome.setOnClickListener(new View.OnClickListener() {

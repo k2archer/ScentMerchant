@@ -44,7 +44,7 @@ public class StatisticsActivity extends AppCompatActivity {
         // start 仅测试用，随后删除
         item.scanType = "微信扫码";
         item.scanDate = "2019-5-20";
-        item.scanIncom = "¥ 2.08";
+        item.scanIncome = "¥ 2.08";
         item.advSharingType = "触发广告分成";
         statisticsList.add(item);
         // end
