@@ -12,4 +12,5 @@ public class StickerDetail {
     public String settlement;  // 收益结算
     public String scanMode;    // 扫码方式
     public String[] pictures;  // 环境照
+    public String poster;      // 海报 URL
 }
