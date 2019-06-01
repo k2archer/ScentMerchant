@@ -31,7 +31,7 @@
     </LinearLayout>
 
     <android.support.v7.widget.AppCompatImageView
-        android:id="@+id/iv_adv_bar"
+        android:id="@+id/iv_sticker_adv_bar"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         app:layout_constraintTop_toBottomOf="@id/ll_title"
@@ -49,11 +49,12 @@
         android:text="桌贴数量"
         android:textSize="22sp"
         app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintLeft_toLeftOf="@id/iv_adv_bar"
+        app:layout_constraintLeft_toLeftOf="@id/iv_sticker_adv_bar"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_adv_bar" />
+        app:layout_constraintTop_toBottomOf="@id/iv_sticker_adv_bar" />
 
     <TextView
+        android:id="@+id/sticker_amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=" 16个 "
@@ -73,7 +74,7 @@
         app:layout_constraintTop_toBottomOf="@id/tv_merchant_id" />
 
     <TextView
-        android:id="@+id/tv_sticker_content"
+        android:id="@+id/tv_sticker_content_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:paddingTop="14dp"
@@ -86,14 +87,15 @@
         app:layout_constraintTop_toBottomOf="@id/tv_merchant_id" />
 
     <TextView
+        android:id="@+id/sticker_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=" 逍遥江湖 "
         android:textSize="22dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@id/tv_sticker_content"
+        app:layout_constraintBottom_toBottomOf="@id/tv_sticker_content_title"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_sticker_content"
+        app:layout_constraintTop_toTopOf="@id/tv_sticker_content_title"
         android:gravity="end"/>
 
     <View
@@ -101,11 +103,11 @@
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:background="#b9b6b6"
-        app:layout_constraintLeft_toLeftOf="@id/tv_sticker_content"
-        app:layout_constraintTop_toBottomOf="@id/tv_sticker_content" />
+        app:layout_constraintLeft_toLeftOf="@id/tv_sticker_content_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_sticker_content_title" />
 
     <TextView
-        android:id="@+id/tv_sticker_activate_date"
+        android:id="@+id/tv_sticker_activate_date_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:paddingTop="14dp"
@@ -113,19 +115,20 @@
         android:text="激活日期"
         android:textSize="22sp"
         app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintLeft_toLeftOf="@id/tv_sticker_content"
+        app:layout_constraintLeft_toLeftOf="@id/tv_sticker_content_title"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_sticker_content" />
+        app:layout_constraintTop_toBottomOf="@id/tv_sticker_content_title" />
 
     <TextView
+        android:id="@+id/tv_sticker_activate_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=" 2019-5-20 09:35:15 "
         android:textSize="22dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@id/tv_sticker_activate_date"
+        app:layout_constraintBottom_toBottomOf="@id/tv_sticker_activate_date_title"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_sticker_activate_date"
+        app:layout_constraintTop_toTopOf="@id/tv_sticker_activate_date_title"
         android:gravity="end"/>
 
     <View
@@ -133,11 +136,11 @@
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:background="#b9b6b6"
-        app:layout_constraintLeft_toLeftOf="@id/tv_sticker_activate_date"
-        app:layout_constraintTop_toBottomOf="@id/tv_sticker_activate_date" />
+        app:layout_constraintLeft_toLeftOf="@id/tv_sticker_activate_date_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_sticker_activate_date_title" />
 
     <TextView
-        android:id="@+id/tv_sticker_distribute_cycle"
+        android:id="@+id/tv_sticker_cycle_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:paddingTop="14dp"
@@ -145,19 +148,20 @@
         android:text="投放周期"
         android:textSize="22sp"
         app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintLeft_toLeftOf="@id/tv_sticker_activate_date"
+        app:layout_constraintLeft_toLeftOf="@id/tv_sticker_activate_date_title"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_sticker_activate_date" />
+        app:layout_constraintTop_toBottomOf="@id/tv_sticker_activate_date_title" />
 
     <TextView
+        android:id="@+id/tv_sticker_cycle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="60天"
         android:textSize="22dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@id/tv_sticker_distribute_cycle"
+        app:layout_constraintBottom_toBottomOf="@id/tv_sticker_cycle_title"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_sticker_distribute_cycle"
+        app:layout_constraintTop_toTopOf="@id/tv_sticker_cycle_title"
         android:gravity="end"/>
 
     <View
@@ -165,8 +169,8 @@
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:background="#b9b6b6"
-        app:layout_constraintLeft_toLeftOf="@id/tv_sticker_distribute_cycle"
-        app:layout_constraintTop_toBottomOf="@id/tv_sticker_distribute_cycle" />
+        app:layout_constraintLeft_toLeftOf="@id/tv_sticker_cycle_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_sticker_cycle_title" />
 
     <TextView
         android:id="@+id/tv_sticker_income"
@@ -177,9 +181,9 @@
         android:text="桌贴收益"
         android:textSize="22sp"
         app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintLeft_toLeftOf="@id/tv_sticker_distribute_cycle"
+        app:layout_constraintLeft_toLeftOf="@id/tv_sticker_cycle_title"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_sticker_distribute_cycle" />
+        app:layout_constraintTop_toBottomOf="@id/tv_sticker_cycle_title" />
 
     <TextView
         android:layout_width="wrap_content"

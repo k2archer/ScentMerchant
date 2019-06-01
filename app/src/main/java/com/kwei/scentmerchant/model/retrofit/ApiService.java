@@ -5,10 +5,12 @@ import com.kwei.scentmerchant.model.bean.StickerResponseBody;
 import com.kwei.scentmerchant.model.bean.base.BaseResponseBody;
 
 import java.util.List;
+import java.util.Map;
 
 import io.reactivex.Observable;
 import okhttp3.MultipartBody;
 import retrofit2.http.Field;
+import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
@@ -35,4 +37,7 @@ public interface ApiService {
     @FormUrlEncoded
     Observable<StickerResponseBody> getStickerDetail(@Field("body") String body);
 
+    @POST("getSticker")
+    @FormUrlEncoded
+    Observable<StickerResponseBody> getSticker(@FieldMap Map<String, String> body);
 }

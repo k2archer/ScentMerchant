@@ -63,7 +63,9 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.tv_sticker_income:
 //                setStyle(view);
-                startActivity(new Intent(this, StickerIncomeActivity.class));
+                Intent intent = new Intent(this, StickerIncomeActivity.class);
+                intent.putExtra("mobile", mobile);
+                startActivity(intent);
                 break;
             case R.id.bt_income_record:
                 startActivity(new Intent(this, SettlementRecordActivity.class));
