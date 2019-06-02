@@ -1,14 +1,21 @@
 package com.kwei.scentmerchant.contract;
 
 import com.kwei.scentmerchant.bean.MerchantAccount;
+import com.kwei.scentmerchant.bean.SettlementItem;
+
+import java.util.List;
 
 public interface MerchantContract {
     interface Model {
-        public void getMerchantAccount(MerchantContract.Presenter presenter);
+        void getMerchantAccount(MerchantContract.Presenter presenter);
+
+        void getSettlementList(Presenter presenter);
     }
 
     interface View {
-        public void showAccount(MerchantAccount account);
+        void showAccount(MerchantAccount account);
+
+        void updateList(List<SettlementItem> list);
 
         void onFail(String message);
 
@@ -16,12 +23,16 @@ public interface MerchantContract {
     }
 
     interface Presenter {
-        public void showAccount(MerchantAccount account);
+        void getMerchantAccount();
+
+        void showAccount(MerchantAccount account);
+
+        void getSettlementList();
+
+        void updateList(List<SettlementItem> list);
 
         void onFail(String message);
 
         void showToast(String message);
-
-        void getMerchantAccount();
     }
 }

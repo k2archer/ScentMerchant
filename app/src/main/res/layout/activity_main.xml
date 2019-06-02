@@ -163,7 +163,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="结算记录"
-            app:layout_constraintLeft_toLeftOf="@+id/bt_income_record"
+            app:layout_constraintLeft_toLeftOf="@id/bt_income_record"
             app:layout_constraintRight_toRightOf="@id/bt_income_record"
             app:layout_constraintTop_toBottomOf="@id/bt_income_record" />
 

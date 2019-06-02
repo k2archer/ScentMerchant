@@ -17,6 +17,7 @@ import com.kwei.scentmerchant.contract.MerchantContract;
 import com.kwei.scentmerchant.presenter.MerchantPresenter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -60,17 +61,18 @@ public class SettlementRecordActivity extends AppCompatActivity implements Merch
         settlementListView.setLayoutManager(new LinearLayoutManager(this));
 
         settlementList = new ArrayList<>();
-        SettlementItem item = new SettlementItem();
-
-        // start 仅测试用，随后删除
-        item.date = "2019年05月19日 09:13";
-        item.amount = "¥ 2535.08";
-        item.message = "收款1笔，已结算";
-        settlementList.add(item);
-        // end
 
         settlementListAdapter = new SettlementAdapter(this, settlementList);
+        settlementListAdapter.setLoadMoreLayout(R.layout.default_loading);
+        settlementListAdapter.setOnLoadMoreListener(new SettlementAdapter.OnLoadMoreListener() {
+            @Override
+            public void onLoadMoreRequested() {
+                presenter.getSettlementList();
+            }
+        });
         settlementListView.setAdapter(settlementListAdapter);
+
+        presenter.getSettlementList();
     }
 
     @OnClick({R.id.tv_back_sign, R.id.tv_enterprise_account_detail})
@@ -98,6 +100,17 @@ public class SettlementRecordActivity extends AppCompatActivity implements Merch
         tvBankAccount.setText("银行账户：" + builder.toString());
 
         tvMerchantAccountState.setText(account.state);
+    }
+
+    @Override
+    public void updateList(List<SettlementItem> list) {
+        settlementListView.post(new Runnable() {
+            @Override
+            public void run() {
+                settlementList.addAll(list);
+                settlementListAdapter.notifyDataSetChanged();
+            }
+        });
     }
 
     @Override

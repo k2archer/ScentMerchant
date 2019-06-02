@@ -124,7 +124,7 @@
         android:id="@+id/v_bar_2"
         android:layout_width="match_parent"
         android:layout_height="12dp"
-        android:background="#e5e5e5"
+        android:background="#f2f2f2"
         app:layout_constraintTop_toBottomOf="@id/tv_enterprise_account_detail" />
 
     <android.support.v7.widget.RecyclerView
