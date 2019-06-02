@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     android:background="@android:color/white"
+    android:fitsSystemWindows="true"
     tools:context=".activity.SettlementRecordActivity">
 
     <View
@@ -53,6 +53,7 @@
         app:layout_constraintTop_toBottomOf="@id/tv_title" />
 
     <TextView
+        android:id="@+id/tv_merchant_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -63,6 +64,7 @@
 
 
     <TextView
+        android:id="@+id/tv_bank_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -98,6 +100,7 @@
         app:layout_constraintTop_toBottomOf="@id/v_bar_1" />
 
     <TextView
+        android:id="@+id/tv_merchant_account_state"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="审核中"
@@ -117,17 +120,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/tv_enterprise_account_detail" />
 
+    <View
+        android:id="@+id/v_bar_2"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="#e5e5e5"
+        app:layout_constraintTop_toBottomOf="@id/tv_enterprise_account_detail" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_settlement_record"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tv_enterprise_account_detail"/>
-
-    <View
-        android:id="@+id/v_bar_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#e5e5e5"
-        app:layout_constraintTop_toBottomOf="@id/rv_settlement_record" />
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v_bar_2" />
 
 </android.support.constraint.ConstraintLayout>
