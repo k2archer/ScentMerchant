@@ -94,7 +94,7 @@
         app:layout_constraintTop_toBottomOf="@id/tv_income" />
 
     <TextView
-        android:id="@+id/tv_merchant_id"
+        android:id="@+id/tv_merchant_id_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -109,26 +109,27 @@
         app:layout_constraintTop_toBottomOf="@id/v_bar_1" />
 
     <TextView
+        android:id="@+id/tv_merchant_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:gravity="end"
         android:text="1204164031"
         android:textSize="22dp"
-        app:layout_constraintBottom_toBottomOf="@id/tv_merchant_id"
+        app:layout_constraintBottom_toBottomOf="@id/tv_merchant_id_title"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_merchant_id" />
+        app:layout_constraintTop_toTopOf="@id/tv_merchant_id_title" />
 
     <View
         android:id="@+id/v_bar_2"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:background="#e5e5e5"
-        app:layout_constraintLeft_toLeftOf="@id/tv_merchant_id"
-        app:layout_constraintTop_toBottomOf="@id/tv_merchant_id" />
+        app:layout_constraintLeft_toLeftOf="@id/tv_merchant_id_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_merchant_id_title" />
 
     <TextView
-        android:id="@+id/tv_scan_type"
+        android:id="@+id/tv_scan_type_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:paddingTop="16dp"
@@ -141,18 +142,19 @@
         app:layout_constraintTop_toBottomOf="@id/v_bar_2" />
 
     <TextView
+        android:id="@+id/tv_scan_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:gravity="end"
         android:text="微信扫码"
         android:textSize="22dp"
-        app:layout_constraintBottom_toBottomOf="@id/tv_scan_type"
+        app:layout_constraintBottom_toBottomOf="@id/tv_scan_type_title"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_scan_type" />
+        app:layout_constraintTop_toTopOf="@id/tv_scan_type_title" />
 
     <TextView
-        android:id="@+id/tv_income_type"
+        android:id="@+id/tv_income_type_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:paddingTop="16dp"
@@ -160,23 +162,24 @@
         android:text="收益方式"
         android:textSize="22sp"
         app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintLeft_toLeftOf="@id/tv_scan_type"
+        app:layout_constraintLeft_toLeftOf="@id/tv_scan_type_title"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_scan_type" />
+        app:layout_constraintTop_toBottomOf="@id/tv_scan_type_title" />
 
     <TextView
+        android:id="@+id/tv_income_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:gravity="end"
         android:text="触发广告分成"
         android:textSize="22dp"
-        app:layout_constraintBottom_toBottomOf="@id/tv_income_type"
+        app:layout_constraintBottom_toBottomOf="@id/tv_income_type_title"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_income_type" />
+        app:layout_constraintTop_toTopOf="@id/tv_income_type_title" />
 
     <TextView
-        android:id="@+id/tv_scan_date"
+        android:id="@+id/tv_scan_date_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:paddingTop="16dp"
@@ -184,20 +187,21 @@
         android:text="扫码时间"
         android:textSize="22sp"
         app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintLeft_toLeftOf="@id/tv_income_type"
+        app:layout_constraintLeft_toLeftOf="@id/tv_income_type_title"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_income_type" />
+        app:layout_constraintTop_toBottomOf="@id/tv_income_type_title" />
 
     <TextView
+        android:id="@+id/tv_scan_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:gravity="end"
         android:text="2019-05-19 10:23:01"
         android:textSize="22dp"
-        app:layout_constraintBottom_toBottomOf="@id/tv_scan_date"
+        app:layout_constraintBottom_toBottomOf="@id/tv_scan_date_title"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_scan_date" />
+        app:layout_constraintTop_toTopOf="@id/tv_scan_date_title" />
 
     <View
         android:id="@+id/v_bar_3"
@@ -205,7 +209,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="#e5e5e5"
-        app:layout_constraintTop_toBottomOf="@id/tv_scan_date" />
+        app:layout_constraintTop_toBottomOf="@id/tv_scan_date_title" />
 
     <TextView
         android:id="@+id/tv_doubt"
