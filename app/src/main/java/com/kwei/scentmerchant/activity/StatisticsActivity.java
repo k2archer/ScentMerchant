@@ -1,6 +1,8 @@
 package com.kwei.scentmerchant.activity;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -28,8 +30,9 @@ public class StatisticsActivity extends AppCompatActivity implements StatisticsC
     TextView tvPendingSettlement;
     @BindView(R.id.tv_cumulative_income)
     TextView tvCumulativeIncome;
+    @BindView(R.id.rv_statistics_view)
+    RecyclerView statisticsListView;
 
-    private RecyclerView statisticsListView;
     private StatisticsAdapter statisticsListAdapter;
     private ArrayList<StatisticsItem> statisticsList;
 
@@ -48,21 +51,37 @@ public class StatisticsActivity extends AppCompatActivity implements StatisticsC
     }
 
     private void init() {
-        statisticsListView = findViewById(R.id.rv_statistics_view);
-        statisticsListView.setLayoutManager(new LinearLayoutManager(this));
-
         statisticsList = new ArrayList<>();
         StatisticsItem item = new StatisticsItem();
 
         // start 仅测试用，随后删除
         item.scanType = "微信扫码";
         item.scanDate = "2019-5-20";
-        item.scanIncome = "¥ 2.08";
+        item.scanIncome = "" + (int) (Math.random() * 26 + 97);
         item.advSharingType = "触发广告分成";
         statisticsList.add(item);
         // end
 
+        statisticsListView.setLayoutManager(new LinearLayoutManager(this));
         statisticsListAdapter = new StatisticsAdapter(this, statisticsList);
+        statisticsListAdapter.setLoadMoreLayout(R.layout.default_loading);
+        statisticsListAdapter.setOnLoadMoreListener(new StatisticsAdapter.OnLoadMoreListener() {
+            @Override
+            public void onLoadMoreRequested() {
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        StatisticsItem item = new StatisticsItem();
+                        item.scanType = "微信扫码";
+                        item.scanDate = "2019-5-20";
+                        item.scanIncome = "" + (int) (Math.random() * 26 + 97);
+                        item.advSharingType = "触发广告分成";
+                        statisticsList.add(item);
+                        statisticsListAdapter.notifyDataSetChanged();
+                    }
+                }, 500);
+            }
+        });
         statisticsListView.setAdapter(statisticsListAdapter);
     }
 

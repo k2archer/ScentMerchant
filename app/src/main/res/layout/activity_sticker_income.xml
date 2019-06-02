@@ -39,7 +39,7 @@
 
 
     <TextView
-        android:id="@+id/tv_merchant_id"
+        android:id="@+id/tv_merchant_id_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
@@ -60,9 +60,9 @@
         android:text=" 16个 "
         android:textSize="22dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@id/tv_merchant_id"
+        app:layout_constraintBottom_toBottomOf="@id/tv_merchant_id_title"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_merchant_id"
+        app:layout_constraintTop_toTopOf="@id/tv_merchant_id_title"
         android:gravity="end"/>
 
     <View
@@ -70,8 +70,8 @@
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:background="#b9b6b6"
-        app:layout_constraintLeft_toLeftOf="@id/tv_merchant_id"
-        app:layout_constraintTop_toBottomOf="@id/tv_merchant_id" />
+        app:layout_constraintLeft_toLeftOf="@id/tv_merchant_id_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_merchant_id_title" />
 
     <TextView
         android:id="@+id/tv_sticker_content_title"
@@ -82,9 +82,9 @@
         android:text="桌贴内容"
         android:textSize="22sp"
         app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintLeft_toLeftOf="@id/tv_merchant_id"
+        app:layout_constraintLeft_toLeftOf="@id/tv_merchant_id_title"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_merchant_id" />
+        app:layout_constraintTop_toBottomOf="@id/tv_merchant_id_title" />
 
     <TextView
         android:id="@+id/sticker_content"

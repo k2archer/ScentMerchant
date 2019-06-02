@@ -1,6 +1,9 @@
 package com.kwei.scentmerchant.bean;
 
-public class StatisticsItem {
+import java.io.Serializable;
+
+public class StatisticsItem implements Serializable {
+    public String merchantId;
     public String scanType;
     public String scanDate;
     public String scanIncome;
