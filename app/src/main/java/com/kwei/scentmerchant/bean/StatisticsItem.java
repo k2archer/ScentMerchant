@@ -3,6 +3,7 @@ package com.kwei.scentmerchant.bean;
 import java.io.Serializable;
 
 public class StatisticsItem implements Serializable {
+    public String Id;
     public String merchantId;
     public String scanType;
     public String scanDate;

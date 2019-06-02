@@ -1,8 +1,11 @@
 package com.kwei.scentmerchant.presenter;
 
+import com.kwei.scentmerchant.bean.StatisticsItem;
 import com.kwei.scentmerchant.contract.StatisticsContract;
 import com.kwei.scentmerchant.model.StatisticsModel;
 import com.kwei.scentmerchant.model.bean.StatisticsData;
+
+import java.util.List;
 
 public class StatisticsPresenter implements StatisticsContract.Presenter {
 
@@ -30,5 +33,14 @@ public class StatisticsPresenter implements StatisticsContract.Presenter {
     @Override
     public void onFail(String message) {
         statisticsView.onFail(message);
+    }
+
+    @Override
+    public void updateList(List<StatisticsItem> data) {
+        statisticsView.updateList(data);
+    }
+
+    public void getStatisticsPage() {
+        statisticsModel.getStatisticsPage(statisticsView.getStickerId(),this);
     }
 }

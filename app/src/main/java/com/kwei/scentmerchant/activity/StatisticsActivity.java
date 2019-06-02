@@ -17,6 +17,7 @@ import com.kwei.scentmerchant.model.bean.StatisticsData;
 import com.kwei.scentmerchant.presenter.StatisticsPresenter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -36,6 +37,7 @@ public class StatisticsActivity extends AppCompatActivity implements StatisticsC
     private StatisticsAdapter statisticsListAdapter;
     private ArrayList<StatisticsItem> statisticsList;
 
+    private String stickerId;
     private StatisticsPresenter presenter;
 
     @Override
@@ -44,23 +46,16 @@ public class StatisticsActivity extends AppCompatActivity implements StatisticsC
         setContentView(R.layout.activity_statistics);
         ButterKnife.bind(this);
 
-        init();
+        stickerId = getIntent().getStringExtra("sticker_id");
 
         presenter = new StatisticsPresenter(this);
         presenter.getStatistics();
+
+        init();
     }
 
     private void init() {
         statisticsList = new ArrayList<>();
-        StatisticsItem item = new StatisticsItem();
-
-        // start 仅测试用，随后删除
-        item.scanType = "微信扫码";
-        item.scanDate = "2019-5-20";
-        item.scanIncome = "" + (int) (Math.random() * 26 + 97);
-        item.advSharingType = "触发广告分成";
-        statisticsList.add(item);
-        // end
 
         statisticsListView.setLayoutManager(new LinearLayoutManager(this));
         statisticsListAdapter = new StatisticsAdapter(this, statisticsList);
@@ -68,21 +63,12 @@ public class StatisticsActivity extends AppCompatActivity implements StatisticsC
         statisticsListAdapter.setOnLoadMoreListener(new StatisticsAdapter.OnLoadMoreListener() {
             @Override
             public void onLoadMoreRequested() {
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        StatisticsItem item = new StatisticsItem();
-                        item.scanType = "微信扫码";
-                        item.scanDate = "2019-5-20";
-                        item.scanIncome = "" + (int) (Math.random() * 26 + 97);
-                        item.advSharingType = "触发广告分成";
-                        statisticsList.add(item);
-                        statisticsListAdapter.notifyDataSetChanged();
-                    }
-                }, 500);
+                presenter.getStatisticsPage();
             }
         });
         statisticsListView.setAdapter(statisticsListAdapter);
+
+        presenter.getStatisticsPage();
     }
 
     @OnClick(R.id.tv_back_sign)
@@ -97,6 +83,23 @@ public class StatisticsActivity extends AppCompatActivity implements StatisticsC
     }
 
     @Override
+    public void updateList(List<StatisticsItem> statisticsItemList) {
+        statisticsListView.post(new Runnable() {
+            @Override
+            public void run() {
+//                StatisticsItem item = new StatisticsItem();
+//                item.scanType = "微信扫码";
+//                item.scanDate = "2019-5-20";
+//                item.scanIncome = "" + (int) (Math.random() * 26 + 97);
+//                item.advSharingType = "触发广告分成";
+//                statisticsList.add(item);
+                statisticsList.addAll(statisticsItemList);
+                statisticsListAdapter.notifyDataSetChanged();
+            }
+        });
+    }
+
+    @Override
     public void showToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
@@ -104,5 +107,10 @@ public class StatisticsActivity extends AppCompatActivity implements StatisticsC
     @Override
     public void onFail(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public String getStickerId() {
+        return stickerId;
     }
 }

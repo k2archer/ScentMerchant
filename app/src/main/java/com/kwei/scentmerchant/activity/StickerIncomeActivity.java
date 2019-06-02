@@ -25,6 +25,8 @@ public class StickerIncomeActivity extends AppCompatActivity implements StickerI
 
     String mobile;
     StickerIncomePresenter presenter;
+    StickerDetail sticker;
+
     @BindView(R.id.sticker_amount)
     TextView stickerAmount;
     @BindView(R.id.sticker_content)
@@ -51,7 +53,11 @@ public class StickerIncomeActivity extends AppCompatActivity implements StickerI
 
     @OnClick(R.id.tv_sticker_income)
     public void onViewClicked() {
-        startActivity(new Intent(this, StatisticsActivity.class));
+        if (sticker != null) {
+            Intent intent = new Intent(this, StatisticsActivity.class);
+            intent.putExtra("sticker_id", sticker.id);
+            startActivity(intent);
+        }
     }
 
     @Override
@@ -81,5 +87,7 @@ public class StickerIncomeActivity extends AppCompatActivity implements StickerI
         String time = format0.format(sticker.date.getTime());
         tvStickerActivateDate.setText(time);
         tvStickerCycle.setText(sticker.cycle + "天");
+
+        this.sticker = sticker;
     }
 }
