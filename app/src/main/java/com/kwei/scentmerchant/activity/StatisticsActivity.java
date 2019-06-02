@@ -1,8 +1,6 @@
 package com.kwei.scentmerchant.activity;
 
 import android.os.Bundle;
-import android.os.Handler;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -87,12 +85,6 @@ public class StatisticsActivity extends AppCompatActivity implements StatisticsC
         statisticsListView.post(new Runnable() {
             @Override
             public void run() {
-//                StatisticsItem item = new StatisticsItem();
-//                item.scanType = "微信扫码";
-//                item.scanDate = "2019-5-20";
-//                item.scanIncome = "" + (int) (Math.random() * 26 + 97);
-//                item.advSharingType = "触发广告分成";
-//                statisticsList.add(item);
                 statisticsList.addAll(statisticsItemList);
                 statisticsListAdapter.notifyDataSetChanged();
             }
