@@ -16,4 +16,18 @@
         <item>50元至100元</item>
         <item>150元至200元</item>
     </string-array>
+
+    <string-array name="account_type">
+        <item>选择账户类型</item>
+        <item>对公账户</item>
+        <item>个人账户</item>
+    </string-array>
+
+    <string-array name="bank_name">
+        <item>选择开户行</item>
+        <item>工商银行</item>
+        <item>农业银行</item>
+        <item>中国银行</item>
+        <item>建设银行</item>
+    </string-array>
 </resources>
