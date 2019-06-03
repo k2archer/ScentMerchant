@@ -2,6 +2,7 @@ package com.kwei.scentmerchant.model.retrofit;
 
 import com.kwei.scentmerchant.model.bean.BaseMessage;
 import com.kwei.scentmerchant.model.bean.MerchantAccountResponseBody;
+import com.kwei.scentmerchant.model.bean.MerchantDetailResponseBody;
 import com.kwei.scentmerchant.model.bean.SettlementListBody;
 import com.kwei.scentmerchant.model.bean.StatisticsListResponseBody;
 import com.kwei.scentmerchant.model.bean.StatisticsResponseBody;
@@ -60,4 +61,13 @@ public interface ApiService {
     @POST("getSettlementList")
     @FormUrlEncoded
     Observable<SettlementListBody> getSettlementList(@FieldMap Map<String, String> body);
+
+    @POST("getMerchant")
+    @FormUrlEncoded
+    Observable<MerchantDetailResponseBody> getMerchant(@FieldMap Map<String, String> body);
+
+    @POST("submitMerchant")
+    @FormUrlEncoded
+    Observable<BaseResponseBody> submitMerchant(@FieldMap Map<String, String> body);
+
 }
