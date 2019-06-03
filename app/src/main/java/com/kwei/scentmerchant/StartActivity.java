@@ -54,8 +54,10 @@ public class StartActivity extends AppCompatActivity {
         }
 
         mobile = getIntent().getStringExtra("login_mobile");
-        String mobileNumber = mobile.substring(0, 3) + "****" + mobile.substring(7, mobile.length());
-        tvMobile.setText(mobileNumber);
+        if (mobile != null) {
+            String mobileNumber = mobile.substring(0, 3) + "****" + mobile.substring(7, mobile.length());
+            tvMobile.setText(mobileNumber);
+        }
     }
 
     @OnClick({R.id.tv_add_merchant, R.id.tv_active_desk, R.id.tv_start, R.id.bt_start, R.id.tv_more_info})
