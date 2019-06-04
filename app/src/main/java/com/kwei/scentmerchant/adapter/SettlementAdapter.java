@@ -3,18 +3,16 @@ package com.kwei.scentmerchant.adapter;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.kwei.scentmerchant.R;
 import com.kwei.scentmerchant.bean.SettlementItem;
 
 import java.util.List;
 
-public class SettlementAdapter extends RecyclerView.Adapter<SettlementAdapter.Holder> {
+public class SettlementAdapter extends RecyclerView.Adapter<Holder> {
 
     private static final int ITEM_LOAD_MORE = Integer.MAX_VALUE - 2;
 
@@ -22,34 +20,6 @@ public class SettlementAdapter extends RecyclerView.Adapter<SettlementAdapter.Ho
     private List<SettlementItem> itemList;
     private View loadMoreView;
     private int loadMoreLayoutResId;
-
-    class Holder extends RecyclerView.ViewHolder {
-
-        private Holder(@NonNull View itemView) {
-            super(itemView);
-
-            mViews = new SparseArray<View>();
-            mConvertView = itemView;
-        }
-
-        private SparseArray<View> mViews;
-        private View mConvertView;
-
-        public <T extends View> T getView(int viewId) {
-            View view = mViews.get(viewId);
-            if (view == null) {
-                view = mConvertView.findViewById(viewId);
-                mViews.put(viewId, view);
-            }
-            return (T) view;
-        }
-
-        public Holder setText(int viewId, String text) {
-            TextView tv = getView(viewId);
-            tv.setText(text);
-            return this;
-        }
-    }
 
     public SettlementAdapter(Context context, List<SettlementItem> list) {
         this.context = context;
