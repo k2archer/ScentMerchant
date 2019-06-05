@@ -71,7 +71,7 @@ public interface ApiService {
     @FormUrlEncoded
     Observable<BaseResponseBody> submitMerchant(@FieldMap Map<String, String> body);
 
-    @POST("GetNotificationList")
+    @POST("getNotificationList")
     @FormUrlEncoded
     Observable<NotificationResponseBody> getNotificationList(@FieldMap Map<String, String> body);
 }
