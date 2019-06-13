@@ -9,26 +9,18 @@ public interface MerchantDetailContract {
         void submitVerify(Presenter presenter);
     }
 
-    interface View {
+    interface View extends BaseContract.View {
         void showMerchantDetail(MerchantDetail merchant);
-
-        void onFail(String message);
-
-        void showToast(String message);
 
         void onSubmitSucceed();
     }
 
-    interface Presenter {
+    interface Presenter extends BaseContract.Presenter {
         void getMerchantDetail();
 
         void showMerchantDetail(MerchantDetail merchant);
 
         void summitVerify();
-
-        void onFail(String message);
-
-        void showToast(String message);
 
         void onSubmitSucceed();
     }

@@ -7,21 +7,13 @@ public interface StickerIncomeContract {
         void getSticker(String mobile, StickerIncomeContract.Presenter presenter);
     }
 
-    interface View {
+    interface View extends BaseContract.View {
         String getMobile();
-
-        void onFail(String message);
-
-        void showToast(String message);
 
         void showSticker(StickerDetail sticker);
     }
 
-    interface Presenter {
-        void onFail(String message);
-
-        void showToast(String message);
-
+    interface Presenter extends BaseContract.Presenter {
         void showSticker(StickerDetail sticker);
     }
 

@@ -8,7 +8,7 @@ public interface ShopContract {
 
     }
 
-    interface View {
+    interface View extends BaseContract.View {
 
         String getMobile();
 
@@ -29,20 +29,14 @@ public interface ShopContract {
 
         // contact presenter
         void onSuccess();
-
-        void onFail(String message);
-
-        void showToast(String message);
     }
 
-    interface ShopPresenter {
+    interface ShopPresenter extends BaseContract.Presenter {
 
         void onAddNewShopSuccess();
 
-        void onFail(String message);
-
-        void showToast(String message);
-
         void addShop();
+
+        void getShopDetail();
     }
 }

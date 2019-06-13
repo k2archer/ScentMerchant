@@ -9,26 +9,17 @@ public interface StickerContract {
         void activateSticker(String id, StickerContract.StickerPresenter presenter);
     }
 
-    interface View {
+    interface View extends BaseContract.View {
         String getStickerUrl();
 
         void showStickerDetail(StickerDetail sticker);
 
         void onActivatedSticker();
 
-        void onFail(String message);
-
-        void showToast(String message);
-
         String getStickerId();
     }
 
-    interface StickerPresenter {
-
-        void onFail(String message);
-
-        void showToast(String message);
-
+    interface StickerPresenter extends BaseContract.Presenter {
         void getStickerDetail(String url);
 
         void showStickerDetail(StickerDetail sticker);

@@ -12,17 +12,13 @@ public interface MerchantContract {
         void getSettlementList(Presenter presenter);
     }
 
-    interface View {
+    interface View extends BaseContract.View {
         void showAccount(MerchantAccount account);
 
         void updateList(List<SettlementItem> list);
-
-        void onFail(String message);
-
-        void showToast(String message);
     }
 
-    interface Presenter {
+    interface Presenter extends BaseContract.Presenter {
         void getMerchantAccount();
 
         void showAccount(MerchantAccount account);
@@ -31,8 +27,5 @@ public interface MerchantContract {
 
         void updateList(List<SettlementItem> list);
 
-        void onFail(String message);
-
-        void showToast(String message);
     }
 }

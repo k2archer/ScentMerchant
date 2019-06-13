@@ -11,20 +11,12 @@ public interface NotificationContract {
         void getNotificationList(NotificationPresenter presenter);
     }
 
-    interface View {
+    interface View extends BaseContract.View {
         void updateList(List<NotificationItem> list);
-
-        void showToast(String message);
-
-        void onFail(String message);
     }
 
-    interface Presenter {
+    interface Presenter extends BaseContract.Presenter {
         void getNotificationList();
-
-        void showToast(String message);
-
-        void onFail(String message);
 
         void updateList(List<NotificationItem> list);
     }

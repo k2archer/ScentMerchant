@@ -7,27 +7,18 @@ public interface LoginContract {
         void login(String mobile, String verifyCode, LoginPresenter presenter);
     }
 
-    interface LoginView {
+    interface LoginView extends BaseContract.View {
         String getMobile();
 
         String getVerifyCode();
 
-        // contact presenter
         void onSuccess();
-
-        void onFail(String message);
-
-        void showToast(String message);
 
         void newMerchant();
     }
 
-    interface LoginPresenter {
+    interface LoginPresenter extends BaseContract.Presenter{
         void onSuccess();
-
-        void onFail(String message);
-
-        void showToast(String message);
 
         void newMerchant();
     }
